@@ -1,0 +1,788 @@
+/* Common Variables */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Common Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* Login Page Styles */
+.login-page {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    padding: 1rem;
+}
+
+.login-container {
+    background: var(--bg-primary);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.login-header h1 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea { 
+    width: 100%; 
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Button Styles */
+.btn {
+    width: 100%; 
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white; 
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+.btn i {
+    font-size: 1.25rem;
+}
+
+/* Driver Application Page Styles */
+.driver-application-page {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+    background: var(--bg-primary);
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.header i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header h1 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.application-form {
+    background: var(--bg-primary);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.application-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.form-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.form-section:hover {
+    transform: translateY(-2px);
+}
+
+.form-section h2 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.form-section h2 i {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.input-group {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.input-group:hover {
+    transform: translateY(-2px);
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.form-group textarea {
+    padding-top: 1rem;
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-secondary);
+}
+
+.requirements {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    border: 2px solid var(--border-color);
+}
+
+.requirements h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.requirements h3 i {
+    color: var(--warning-color);
+    font-size: 1.5rem;
+}
+
+.requirements ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.requirements li {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.requirements li::before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn i {
+    font-size: 1.5rem;
+}
+
+.error-message {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: none;
+    padding: 0.75rem;
+    background: #fee2e2;
+    border-radius: 0.5rem;
+    border: 1px solid #fecaca;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 2.5rem;
+    background: #dcfce7;
+    color: var(--success-color);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: 2px solid #bbf7d0;
+}
+
+.success-message i {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--success-color);
+}
+
+.success-message h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header {
+        padding: 2rem 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .application-form {
+        padding: 2rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.75rem;
+    }
+
+    .application-form {
+        padding: 1.5rem;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 1rem;
+    }
+}
+
+/* Manage Admin Modal Styles */
+#manageAdminModal .modal-content {
+    background: var(--bg-primary);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    width: 95%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#manageAdminModal .modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+#manageAdminModal h2 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#manageAdminModal h2 i {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Add Admin Form Styles */
+#addAdminForm {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+#addAdminForm h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#addAdminForm h3 i {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+#addAdminForm .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#addAdminForm .form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#addAdminForm .form-group input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+#addAdminForm .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+#addAdminForm button[type="submit"] {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#addAdminForm button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+#addAdminForm button[type="submit"] i {
+    font-size: 1.25rem;
+}
+
+/* Admin Table Styles */
+.table-wrapper {
+    background: var(--bg-primary);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table-header i {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+.table-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#adminTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#adminTable thead {
+    background: linear-gradient(to right, var(--bg-secondary), transparent);
+}
+
+#adminTable th {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--border-color);
+}
+
+#adminTable td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+#adminTable tbody tr {
+    transition: all 0.3s ease;
+}
+
+#adminTable tbody tr:hover {
+    background-color: var(--bg-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#adminTable td:first-child {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.admin-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.delete-admin-btn {
+    background: #fee2e2;
+    color: var(--danger-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.delete-admin-btn:hover {
+    background: var(--danger-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2);
+}
+
+.delete-admin-btn i {
+    font-size: 1rem;
+}
+
+/* Responsive Styles for Admin Modal */
+@media (max-width: 768px) {
+    #manageAdminModal .modal-content {
+        padding: 2rem;
+    }
+
+    #manageAdminModal h2 {
+        font-size: 1.75rem;
+    }
+
+    #addAdminForm {
+        padding: 1.5rem;
+    }
+
+    .table-header {
+        padding: 1.25rem;
+    }
+
+    #adminTable th,
+    #adminTable td {
+        padding: 1rem;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .delete-admin-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #manageAdminModal .modal-content {
+        padding: 1.5rem;
+    }
+
+    #manageAdminModal h2 {
+        font-size: 1.5rem;
+    }
+
+    #addAdminForm {
+        padding: 1.25rem;
+    }
+
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #adminTable {
+        display: block;
+        overflow-x: auto;
+    }
+} 
