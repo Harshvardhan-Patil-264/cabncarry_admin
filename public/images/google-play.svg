@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="53" viewBox="0 0 180 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="53" rx="6" fill="black"/>
+  <g transform="translate(15, 10)">
+    <!-- Gradients -->
+    <defs>
+      <linearGradient id="green_gradient" x1="18.102" x2="25.297" y1="3.244" y2="34.74" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#35ab4a"/>
+        <stop offset=".297" stop-color="#31a145"/>
+        <stop offset=".798" stop-color="#288739"/>
+        <stop offset="1" stop-color="#237a33"/>
+      </linearGradient>
+      <linearGradient id="red_gradient" x1="19.158" x2="21.194" y1="23.862" y2="66.931" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#f14e5d"/>
+        <stop offset=".499" stop-color="#ea3d4f"/>
+        <stop offset="1" stop-color="#e12138"/>
+      </linearGradient>
+      <linearGradient id="yellow_gradient" x1="32.943" x2="36.541" y1="14.899" y2="43.612" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#ffd844"/>
+        <stop offset=".519" stop-color="#ffc63f"/>
+        <stop offset="1" stop-color="#ffb03a"/>
+      </linearGradient>
+      <linearGradient id="blue_gradient" x1="13.853" x2="15.572" y1="5.901" y2="42.811" gradientUnits="userSpaceOnUse">
+        <stop offset=".003" stop-color="#0090e6"/>
+        <stop offset="1" stop-color="#0065a0"/>
+      </linearGradient>
+    </defs>
+    
+    <!-- Google Play Icon -->
+    <g transform="translate(0, 2) scale(0.7)">
+      <path fill="url(#green_gradient)" d="M13.488 4.012C10.794 2.508 7.605 3.778 6.45 6.323L24.126 24l9.014-9.014L13.488 4.012z"/>
+      <path fill="url(#red_gradient)" d="M33.14 33.014L24.126 24L6.45 41.677c1.156 2.546 4.345 3.815 7.038 2.312L33.14 33.014z"/>
+      <path fill="url(#yellow_gradient)" d="M41.419 28.393c1.72-0.96 2.58-2.676 2.581-4.393-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126 24l9.014 9.014L41.419 28.393z"/>
+      <path fill="url(#blue_gradient)" d="M6.45 6.323C6.168 6.948 6 7.652 6 8.408v31.179c0 0.761 0.164 1.463 0.45 2.09l17.674-17.68L6.45 6.323z"/>
+    </g>
+
+    <!-- Google Play Text -->
+    <g transform="translate(45, 0)">
+      <text x="0" y="12" fill="#FFFFFF" font-family="Arial" font-size="10" font-weight="500">GET IT ON</text>
+      <text x="0" y="28" fill="#FFFFFF" font-family="Arial" font-size="16" font-weight="700">Google Play</text>
+    </g>
+  </g>
+</svg> 

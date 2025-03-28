@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver Application - CabNCarry</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -53,6 +54,28 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="vehicleNumber">Vehicle Number</label>
+                    <div class="input-group">
+                        <i class="fas fa-car"></i>
+                        <input type="text" id="vehicleNumber" name="vehicleNumber" placeholder="e.g., MH 14 AB 1234" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vehicleType">Vehicle Type</label>
+                    <div class="input-group">
+                        <i class="fas fa-truck"></i>
+                        <select id="vehicleType" name="vehicleType" required>
+                            <option value="">Select Vehicle Type</option>
+                            <option value="Mini">Mini (4 Seater)</option>
+                            <option value="Sedan">Sedan (4 Seater)</option>
+                            <option value="SUV">SUV (6-7 Seater)</option>
+                            <option value="Van">Van (8+ Seater)</option>
+                            <option value="Rickshaw">Auto Rickshaw (3 Seater)</option>
+                            <option value="Truck">Mini Truck (Goods)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="experience">Years of Driving Experience</label>
                     <div class="input-group">
                         <i class="fas fa-clock"></i>
@@ -67,6 +90,7 @@
                         <li>Minimum 1 year of driving experience</li>
                         <li>Vehicle in good condition</li>
                         <li>Smartphone with internet access</li>
+                        <li>Valid vehicle registration and insurance</li>
                     </ul>
                 </div>
                 <div class="error-message" id="error-message"></div>
