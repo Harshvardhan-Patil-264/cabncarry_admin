@@ -40,7 +40,7 @@ Before you begin, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/cabncarry-admin.git
+git clone https://github.com/Harshvardhan-Patil-264/cabncarry_admin.git
 cd cabncarry-admin
 ```
 
@@ -176,7 +176,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- Your Name - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- Harshvardhan V. Patil - *Initial work* - [GitHub](https://github.com/Harshvardhan-Patil-264)
 
 ## 🙏 Acknowledgments
 
@@ -188,4 +188,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email support@cabncarry.com or join our Slack channel. 
+For support, email harsh264patil@gmail.com !
